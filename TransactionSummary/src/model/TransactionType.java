@@ -1,5 +1,5 @@
 package model;
 
 public enum TransactionType {
-    FOOD, SHOPPING, EDUCATION, ENTERTAINMENT
+    FOOD, SHOPPING, EDUCATION, ENTERTAINMENT, BOOZE
 }

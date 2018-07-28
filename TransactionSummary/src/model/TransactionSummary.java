@@ -59,7 +59,11 @@ public class TransactionSummary {
                 specificCount++;
             }
         }
-        return avg/specificCount;
+        if (specificCount!=0){
+            return avg/specificCount;
+        }
+
+        return 0;
     }
 
     // REQUIRES: transactions is non-empty

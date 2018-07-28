@@ -75,9 +75,14 @@ public class TransactionSummaryTest {
     }
 
     @Test
-    public void testspecificTypeAverage() {
+    public void testSpecificTypeAverageIsNotBlank() {
         assertEquals(testSummary.specificTypeAverage(FOOD), (11+5+20)/3, 0.05);
         assertEquals(testSummary.specificTypeAverage(EDUCATION), 150, 0.05);
+    }
+
+    @Test
+    public void testSpecificTypeAverageIsBlank() {
+        assertEquals(testSummary.specificTypeAverage(BOOZE), 0, 0.05);
     }
 
     @Test
