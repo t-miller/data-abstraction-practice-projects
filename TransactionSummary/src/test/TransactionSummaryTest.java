@@ -5,6 +5,8 @@ import model.TransactionSummary;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static model.TransactionType.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -35,8 +37,14 @@ public class TransactionSummaryTest {
     }
 
     @Test
-    public void testConstructor() {
+    public void testTransactionSummaryConstructor() {
         assertEquals(testSummary.getName(), "Donald Knuth");
+    }
+
+    @Test
+    public void testTransactionConstructor() {
+        assertEquals(t1.getName(), "Movie");
+        assertEquals(t1.getDate(), "May 1st");
     }
 
     @Test
@@ -69,8 +77,12 @@ public class TransactionSummaryTest {
     @Test
     public void testspecificTypeAverage() {
         assertEquals(testSummary.specificTypeAverage(FOOD), (11+5+20)/3, 0.05);
-        assertEquals( testSummary.specificTypeAverage(EDUCATION), 150, 0.05);
+        assertEquals(testSummary.specificTypeAverage(EDUCATION), 150, 0.05);
     }
 
+    @Test
+    public void testGetTransactions() {
+        assertEquals(testSummary.getTransactions(), Arrays.asList(t1, t2, t3, t4, t5, t6, t7));
+    }
 
 }
