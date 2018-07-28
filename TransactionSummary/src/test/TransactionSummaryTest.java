@@ -54,7 +54,7 @@ public class TransactionSummaryTest {
         Transaction testTransaction = new Transaction("Food", "June 12", 5, FOOD);
         oneSummary.addTransaction(testTransaction);
         assertEquals(oneSummary.averageTransactionCost(), 5, 0.05);
-        assertEquals(testSummary.averageTransactionCost(), (10 + 20 + 40 + 150 + 11 + 40 + 5)/7, 0.05);
+        assertEquals(testSummary.averageTransactionCost(), (10 + 20 + 40 + 150 + 11 + 40 + 5)/7.0, 0.05);
     }
 
     @Test
